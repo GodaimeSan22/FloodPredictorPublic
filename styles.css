@@ -1,0 +1,182 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles for the whole page */
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* Додаємо фонове зображення */
+    background-image: url('https://cdn.myportfolio.com/44b8374c-5758-4aa0-b67e-1a860c4711e6/8bd17184-3fb8-48fc-8f46-2b06814da7d9_rw_1920.jpg?h=a4c1635c8ecdc955d214e9a20c1739a3');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Закріплюємо фон, щоб він залишався на місці при прокручуванні */
+}
+
+/* Header styles */
+header {
+    background-color: #0e2737;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid #00ced1; /* Додаємо кордон бірюзового кольору */
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Navigation styles */
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Задаємо прозорий білий фон */
+    border: 3px solid #00ced1; /* Додаємо кордон бірюзового кольору */
+    border-radius: 10px;
+    margin-top: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sections styles */
+section.part {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Team section styles */
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Map container styles */
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin-bottom: 20px;
+    border: 5px solid #00ced1; /* Додаємо кордон бірюзового кольору */
+    background-color: rgba(255, 255, 255, 0.8); /* Задаємо прозорий білий фон */
+}
+
+/* Controls styles */
+.controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Process section styles */
+.process {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 60px 0;
+}
+
+.process-step {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border: 3px solid #00ced1; /* Додаємо кордон бірюзового кольору */
+    border-radius: 10px;
+}
+
+.process-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 40px;
+    line-height: 80px;
+    margin-bottom: 20px;
+}
+
+.process-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.process-description {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    /* Add your responsive styles here if needed */
+}
