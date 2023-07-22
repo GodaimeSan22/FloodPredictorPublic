@@ -122,9 +122,9 @@ section.key_section{
 div.key_factors{
     color: black;
     width: calc(33.33% - 20px); /* Adjust width to create horizontal gutters */
-    height: 350px; /* Set container height */
+    min-height: 350px; /* Set container height */
     background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    border: 1px solid #0b6edfde;
     padding: 5px;
     box-sizing: border-box;
     text-align: center;
