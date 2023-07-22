@@ -7,7 +7,7 @@
 
 /* Global styles for the whole page */
 body {
-    font-family: "Arial", sans-serif;
+    font-family: "Georgia", sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -114,6 +114,23 @@ h2 {
     margin-bottom: 20px;
 }
 
+section.key_section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+div.key_factors{
+    color: black;
+    width: calc(33.33% - 20px); /* Adjust width to create horizontal gutters */
+    height: 350px; /* Set container height */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 25px;
+    margin: 10px; /* Vertical gutters */
+}
 label {
     margin-right: 10px;
     font-weight: bold;
@@ -178,5 +195,12 @@ button:focus {
 
 /* Media query for responsive design */
 @media (max-width: 600px) {
+    main{
+        margin: 20px;
+    }
+
+    div.key_factors{
+        width: calc(100% - 10px);
+    }
     /* Add your responsive styles here if needed */
 }
