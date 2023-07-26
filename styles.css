@@ -114,23 +114,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-section.key_section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-div.key_factors{
-    color: black;
-    width: calc(33.33% - 20px); /* Adjust width to create horizontal gutters */
-    min-height: 350px; /* Set container height */
-    background-color: #f0f0f0;
-    border: 1px solid #0b6edfde;
-    padding: 5px;
-    box-sizing: border-box;
-    text-align: center;
-    line-height: 25px;
-    margin: 10px; /* Vertical gutters */
-}
 label {
     margin-right: 10px;
     font-weight: bold;
@@ -193,14 +176,65 @@ button:focus {
     color: #666;
 }
 
+
+section.key_section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+div.key_factors{
+    color: black;
+    width: calc(33.33% - 20px); /* Adjust width to create horizontal gutters */
+    min-height: 350px; /* Set container height */
+    background-color: #f0f0f0;
+    border: 1px solid #0b6edfde;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 25px;
+    margin: 10px; /* Vertical gutters */
+}
+section.team{
+    display: flex;
+}
+div.team-member{
+    flex: 1; /* Set elements to take equal width */
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+  }
+  div.team-member + div.team-member {
+    margin-left: 10px; /* Adjust gutter width as needed */
+  }
+  h3.name-member{
+    color:#0e2737;
+    line-height: 25px;
+  }
+
+  p.position-member{
+    font-size: 18px;
+    color:#a0a8ab;
+    line-height: 25px;
+  }
+  p.about-member{
+    color:#0e2737;
+    line-height: 25px;
+  }
+
 /* Media query for responsive design */
 @media (max-width: 600px) {
+    body{
+        position: absolute;
+    }
     main{
         margin: 20px;
     }
-
+    h2{
+        text-align: center;
+    }
     div.key_factors{
         width: calc(100% - 10px);
+        min-height:calc(100% - 10px);
     }
     /* Add your responsive styles here if needed */
 }
