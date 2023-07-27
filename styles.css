@@ -199,8 +199,6 @@ section.team{
 }
 div.team-member{
     flex: 1; /* Set elements to take equal width */
-    background-color: #f0f0f0;
-    padding: 20px;
     text-align: center;
   }
   div.team-member + div.team-member {
@@ -213,22 +211,109 @@ div.team-member{
 
   p.position-member{
     font-size: 18px;
-    color:#a0a8ab;
+    color:#464b4d;
     line-height: 25px;
   }
   p.about-member{
     color:#0e2737;
     line-height: 25px;
+    
+  }
+  
+  section.team{
+    height: 500px;
   }
 
+  .carousel {
+    width: 350px; 
+    height: 100px;
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    position: relative;
+    
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid #0b6edfde;
+    border-radius: 10px; 
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #777373;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2{
+    display: block;
+}
+#first_carousel-1:checked ~ .control-1,
+#first_carousel-2:checked ~ .control-2{
+    display: block;
+}
+
 /* Media query for responsive design */
-@media (max-width: 600px) {
-    body{
-        position: absolute;
-    }
-    main{
-        margin: 20px;
-    }
+@media screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      main {
+        width: 100%;
+      }
+
     h2{
         text-align: center;
     }
@@ -236,5 +321,10 @@ div.team-member{
         width: calc(100% - 10px);
         min-height:calc(100% - 10px);
     }
+    .team-member{
+        width: calc(100% - 10px);
+        min-height:calc(100% - 10px);
+    }
+
     /* Add your responsive styles here if needed */
 }
