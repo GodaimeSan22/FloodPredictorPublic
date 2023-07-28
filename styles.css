@@ -32,6 +32,16 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.name-member h3{
+    color:#0e2737;
+    line-height: 25px;
+}
+
 /* Navigation styles */
 nav {
     margin-top: 10px;
@@ -69,13 +79,19 @@ section.part {
     margin-bottom: 40px;
 }
 
-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+section.key_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section.team {
+    display: flex;
+    height: 500px;
 }
 
 /* Team section styles */
-.team-member {
+.team-member div{
     text-align: center;
     margin-bottom: 20px;
 }
@@ -176,12 +192,8 @@ button:focus {
     color: #666;
 }
 
+/* Element div */
 
-section.key_section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 div.key_factors{
     color: black;
     width: calc(33.33% - 20px); /* Adjust width to create horizontal gutters */
@@ -194,35 +206,25 @@ div.key_factors{
     line-height: 25px;
     margin: 10px; /* Vertical gutters */
 }
-section.team{
-    display: flex;
-}
+
 div.team-member{
     flex: 1; /* Set elements to take equal width */
     text-align: center;
-  }
+}
 
-  h3.name-member{
-    color:#0e2737;
-    line-height: 25px;
-  }
-
-  p.position-member{
+/* Element p */
+p.position-member{
     font-size: 18px;
     color:#464b4d;
     line-height: 25px;
-  }
-  p.about-member{
+}
+
+p.about-member{
     color:#0e2737;
     line-height: 25px;
-    
-  }
+}
   
-  section.team{
-    height: 500px;
-  }
-
-  .carousel {
+div.carousel {
     width: 350px; 
     height: 100px;
     position: relative;
@@ -230,18 +232,11 @@ div.team-member{
     margin: 0 auto;
 }
 
-.carousel-inner {
+div.carousel-inner {
     position: relative;
-    
 }
 
-.carousel-open:checked + .carousel-item {
-    position: static;
-    opacity: 100;
-}
-
-
-.carousel-item {
+div.carousel-item {
     position: absolute;
     opacity: 0;
     text-align: center;
@@ -257,8 +252,13 @@ div.team-member{
     align-items: center;
 }
 
+input.carousel-open:checked + div.carousel-item {
+    position: static;
+    opacity: 100;
+}
 
-.carousel-control {
+/*Label for carousel*/
+label.carousel-control {
     background: rgba(0, 0, 0, 0.28);
     border-radius: 50%;
     color: #fff;
@@ -278,15 +278,15 @@ div.team-member{
     z-index: 10;
 }
 
-.carousel-control.prev {
+label.carousel-control.prev {
     left: 2%;
 }
 
-.carousel-control.next {
+label.carousel-control.next {
     right: 2%;
 }
 
-.carousel-control:hover {
+label.carousel-control:hover {
     background: rgba(0, 0, 0, 0.8);
     color: #777373;
 }
@@ -306,38 +306,47 @@ div.team-member{
         margin: 10px;
         padding: 10px;
     }
+
     h2{
         text-align: center;
     }
+
     div.key_factors{
         width: calc(100% - 10px);
         min-height: calc(100% - 10px);
     }
+
     section.team {
         display: flex;
         flex-direction: column;
         height: 1100px;
         margin-bottom: -100px;
-      }
+    }
+
     div.carousel-inner{
         width: 250px;
     }
+
     div.carousel-item{
         height: calc(100% + 20px);
     }
+
     p.about-member{
         width: 200px;
     }
-    .carousel-control{
+
+    label.carousel-control{
         font-size: 30px; /* Reduced from 40px to 20px */
-    height: 30px; /* Reduced from 40px to 20px */
-    line-height: 25px;
-    width: 20px;
-    }
-    .carousel-control.prev {
+        height: 30px; /* Reduced from 40px to 20px */
+        line-height: 25px;
+        width: 20px;
+    }   
+    
+    label.carousel-control.prev {
         left: 1%;
     }
-    .carousel-control.next {
+
+    label.carousel-control.next {
         right: -3%;
     }
 }
