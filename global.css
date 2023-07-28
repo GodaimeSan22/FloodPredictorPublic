@@ -1,0 +1,323 @@
+* {
+
+
+    text-align: center;
+    align-items: center;
+
+    
+}
+
+body {
+
+    text-align: center;
+    align-items: center;
+    background-image: url('https://cdn.myportfolio.com/44b8374c-5758-4aa0-b67e-1a860c4711e6/8bd17184-3fb8-48fc-8f46-2b06814da7d9_rw_1920.jpg?h=a4c1635c8ecdc955d214e9a20c1739a3');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: auto;
+
+}
+
+header {
+    background-color: #0e2737;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Задаємо прозорий білий фон */
+    border: 3px solid #00ced1; /* Додаємо кордон бірюзового кольору */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px;
+}
+
+.key_factors {
+    color: black; 
+    background-color: #f0f0f0;
+    border: 1px solid #0b6edfde;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 25px;
+    margin: 10px; /* Vertical gutters */
+}
+
+.key_factors p{
+    padding: 10px;
+    margin: -10px;
+
+}
+
+section.team {
+    display: flex;
+    height: 500px;
+}
+
+.team {
+    display: flex;
+
+}
+
+.team-member {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+
+}
+/* Team section styles */
+.team-member div{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Map container styles */
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin-bottom: 20px;
+    border: 5px solid #00ced1; /* Додаємо кордон бірюзового кольору */
+    background-color: rgba(255, 255, 255, 0.8); /* Задаємо прозорий білий фон */
+}
+
+/* Controls styles */
+.controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Process section styles */
+.process {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 60px 0;
+}
+
+.process-step {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border: 3px solid #00ced1; /* Додаємо кордон бірюзового кольору */
+    border-radius: 10px;
+}
+
+.process-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 40px;
+    line-height: 80px;
+    margin-bottom: 20px;
+}
+
+.process-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.process-description {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Element div */
+
+
+div.team-member{
+    flex: 1; /* Set elements to take equal width */
+    text-align: center;
+}
+
+/* Element p */
+p.position-member{
+    font-size: 18px;
+    color:#464b4d;
+    line-height: 25px;
+}
+
+p.about-member{
+    color:#0e2737;
+    line-height: 25px;
+}
+  
+div.carousel {
+    width: 350px; 
+    height: 100px;
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+}
+
+div.carousel-inner {
+    position: relative;
+}
+
+div.carousel-item {
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid #0b6edfde;
+    border-radius: 10px; 
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input.carousel-open:checked + div.carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+/*Label for carousel*/
+label.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+label.carousel-control.prev {
+    left: 2%;
+}
+
+label.carousel-control.next {
+    right: 2%;
+}
+
+label.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #777373;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2{
+    display: block;
+}
+#first_carousel-1:checked ~ .control-1,
+#first_carousel-2:checked ~ .control-2{
+    display: block;
+}
+
+
+
+@media (min-width: 600px) {
+    .key_section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .key_factors{
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;  
+        padding: auto;
+        min-height: 320px; /* Set container height */
+        width: calc(33% - 20px); /* Adjust width to create horizontal gutters */
+    }
+    
+
+}

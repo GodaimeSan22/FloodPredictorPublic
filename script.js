@@ -38,3 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialTerritory = territorySelect.value;
     initMap(initialTerritory);
 });
+
