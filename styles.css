@@ -1,33 +1,30 @@
+/* Reset some default styles */
 * {
-
-
-    text-align: center;
-    align-items: center;
-
-    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/* Global styles for the whole page */
 body {
-
-    text-align: center;
-    align-items: center;
+    font-family: "Georgia", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* Додаємо фонове зображення */
     background-image: url('https://cdn.myportfolio.com/44b8374c-5758-4aa0-b67e-1a860c4711e6/8bd17184-3fb8-48fc-8f46-2b06814da7d9_rw_1920.jpg?h=a4c1635c8ecdc955d214e9a20c1739a3');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Закріплюємо фон, щоб він залишався на місці при прокручуванні */
 }
 
-.wrapper {
-    max-width: 1200px;
-    padding: auto;
-}
-
+/* Header styles */
 header {
     background-color: #0e2737;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-
+    border-bottom: 3px solid #00ced1; /* Додаємо кордон бірюзового кольору */
 }
 
 h1 {
@@ -38,10 +35,14 @@ h1 {
 h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Задаємо прозорий білий фон */
-    border: 3px solid #00ced1; /* Додаємо кордон бірюзового кольору */
 }
 
+.name-member h3{
+    color:#0e2737;
+    line-height: 25px;
+}
+
+/* Navigation styles */
 nav {
     margin-top: 10px;
 }
@@ -61,27 +62,55 @@ nav li a {
     font-size: 20px;
 }
 
-
-.section {
+/* Main styles */
+main {
     padding: 20px;
-    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Задаємо прозорий білий фон */
+    border: 3px solid #00ced1; /* Додаємо кордон бірюзового кольору */
+    border-radius: 10px;
+    margin-top: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.key_factors {
-    color: black; 
-    background-color: #f0f0f0;
-    border: 1px solid #0b6edfde;
-    padding: 5px;
-    box-sizing: border-box;
+/* Sections styles */
+section.part {
+    margin-bottom: 40px;
+}
+
+section.key_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section.team {
+    display: flex;
+    height: 500px;
+}
+
+/* Team section styles */
+.team-member div{
     text-align: center;
-    line-height: 25px;
-    margin: 10px; /* Vertical gutters */
+    margin-bottom: 20px;
 }
 
-.key_factors p{
-    padding: 10px;
-    margin: -10px;
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
 
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #666;
 }
 
 /* Map container styles */
@@ -163,47 +192,52 @@ button:focus {
     color: #666;
 }
 
-/* Part team*/
-div.team{
-    height: 1200px;
+/* Element div */
+
+div.key_factors{
+    color: black;
+    width: calc(33.33% - 20px); /* Adjust width to create horizontal gutters */
+    min-height: 350px; /* Set container height */
+    background-color: #f0f0f0;
+    border: 1px solid #0b6edfde;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 25px;
+    margin: 10px; /* Vertical gutters */
+}
+
+section.part-team {
+    height: 1000px;
 }
 
 div.team-member{
     flex: 1; /* Set elements to take equal width */
     text-align: center;
-    height: 600px;
-}
-
-.team-member img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-h3.name-member {
-    font-size: 25px;
-    margin-bottom: 5px;
-    color: #FFFAFA;
 }
 
 /* Element p */
 p.position-member{
     font-size: 18px;
-    color: #FFFAFA;
+    color:#464b4d;
     line-height: 25px;
 }
 
+p.about-member{
+    color:#0e2737;
+    line-height: 25px;
+}
+  
 div.carousel {
     width: 350px; 
     height: 100px;
-    top: 10px;
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
 }
 
 div.carousel-inner {
     position: relative;
-    width: 270px;
-    margin-left: 45px;
 }
 
 div.carousel-item {
@@ -215,18 +249,13 @@ div.carousel-item {
     border-radius: 10px; 
     padding-left: 50px;
     padding-right: 50px;
-    height: calc(100%-30px);
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-p.about-member{
-    color:#0e2737;
-    line-height: 25px;
-}
-  
 input.carousel-open:checked + div.carousel-item {
     position: static;
     opacity: 100;
@@ -254,11 +283,11 @@ label.carousel-control {
 }
 
 label.carousel-control.prev {
-    left: 0.5%;
+    left: 2%;
 }
 
 label.carousel-control.next {
-    right: -3%;
+    right: 2%;
 }
 
 label.carousel-control:hover {
@@ -275,36 +304,53 @@ label.carousel-control:hover {
     display: block;
 }
 
-
-
-@media (min-width: 600px) {
-    .wrapper {
-        margin: auto;
-        padding: auto;
-    }
-    .key_section{
-        display: flex;
-        flex-wrap: wrap;
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    main{
+        margin: 10px;
+        padding: 10px;
     }
 
-    .key_factors{
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    h2{
         text-align: center;
-        flex-direction: column;  
-        padding: auto;
-        min-height: 320px; /* Set container height */
-        width: calc(33% - 20px); /* Adjust width to create horizontal gutters */
     }
 
-    div.team {
-        display: flex;
-        height: 650px;
+    div.key_factors{
+        width: calc(100% - 10px);
+        min-height: calc(100% - 10px);
     }
+
+    section.team {
+        display: flex;
+        flex-direction: column;
+        height: 1100px;
+        margin-bottom: -100px;
+    }
+
+    div.carousel-inner{
+        width: 250px;
+    }
+
+    div.carousel-item{
+        height: calc(100% + 20px);
+    }
+
+    p.about-member{
+        width: 200px;
+    }
+
+    label.carousel-control{
+        font-size: 30px; /* Reduced from 40px to 20px */
+        height: 30px; /* Reduced from 40px to 20px */
+        line-height: 25px;
+        width: 20px;
+    }   
     
-    div.carousel-inner {
-        margin-left: 165px;
+    label.carousel-control.prev {
+        left: 1%;
+    }
+
+    label.carousel-control.next {
+        right: -3%;
     }
 }
