@@ -165,13 +165,13 @@ button:focus {
 
 /* Part team*/
 div.team{
-    height: 1200px;
+    height: 1300px;
 }
 
 div.team-member{
     flex: 1; /* Set elements to take equal width */
     text-align: center;
-    height: 600px;
+    height: 650px;
 }
 
 .team-member img{
@@ -203,7 +203,7 @@ div.carousel {
 div.carousel-inner {
     position: relative;
     width: 270px;
-    margin-left: 45px;
+    margin-left: 65px;
 }
 
 div.carousel-item {
